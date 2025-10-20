@@ -61,3 +61,27 @@ button {
 .backdrop.show {
   opacity: 30%;
 }
+
+/* 
+REMEMBER: transition is a shorthand
+transition: A B C D is the same as
+transition-property: A
+transition-duration: B
+transition-timing-function: C
+transition-delay: D
+NOTE: multiple properties can be chained too
+*/
+
+.popup-modal {
+  transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease 0s;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.popup-modal.show {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/*
+  -100% (above screen)
+  -50% (center of screen)
+*/
